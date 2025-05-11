@@ -112,6 +112,35 @@ recipient id:Foreign key,reference user(user id)
 message body:TEXT,NO NULL
 sent at:TIMESTAMP DEFUALT CURRENT TIMESTAMP
 NORMALIZATION STEP focuses on leveraging the structural elements inherent in these data types while carefully preseving tags and markdown features 
+DATABASE-SCRIPT-001
+USER
+user id:primary key,UUID indexed
+PROPERTY
+property id:primary key,UUID indexed
+host id:Foreign key,reference user(user id)
+BOOKING
+booking id:primary key,UUID indexed
+property id:Foreign key,reference property(property id)
+user id:foreign key,reference user(user id)
+PAYMENT
+payment id:primary key,UUID indexed
+booking id:Foreign key,reference booking(booking id)
+REVIEW
+review id:primary key,UUID indexed
+property id:foreign key,reference property(property id)
+user id:foreign key,reference user(user id)
+MESSAGE
+message id:primary key,UUID indexed
+sender id:Foreign key,reference user(user id)
+recipient id:Foreign key,reference user(user id)
+CONSTRAINTS
+BOOKING TABLE
+Foreign key contraints on property id and user id
+PAYMENT TABLE
+Foreign key contraint on booking id,ensuring payments linked to valid bookings
+INDEXING
+primary key:indexed automatically
+addtional indexes:property and booking
 
 
 
