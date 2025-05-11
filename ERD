@@ -111,6 +111,7 @@ sender id:Foreign key,reference user(user id)
 recipient id:Foreign key,reference user(user id)
 message body:TEXT,NO NULL
 sent at:TIMESTAMP DEFUALT CURRENT TIMESTAMP
+NORMALIZATION STEP focuses on leveraging the structural elements inherent in these data types while carefully preseving tags and markdown features 
 
 
 
