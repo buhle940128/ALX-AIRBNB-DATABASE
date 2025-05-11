@@ -65,7 +65,7 @@ foreign key constraints on sender id and recipient id
 INDEXING
 primary keys:indexed automatically
 additional indexes:email in the user table,property id in the property and bookingtables,booking id in the booking and payment table
-#NORMALIZATION
+#NORMALIZATION.MD
 USER 
 user id:primary key,UUID,indexed
 first name:VARCHAR,NOT NULL
