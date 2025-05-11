@@ -1,3 +1,4 @@
+requirements.md
 ENTITIES and Attributes
 User
 User id:primary key,uuid,indexed
@@ -57,10 +58,13 @@ status must be one of pending,confirmed,or canceled
 PAYMENT TABLE
 foreign key constraint on booking id,ensuring payment is linkined to valid bookings
 REVIEW TABLE
-contraints on rating values(1-5)
+constraints on rating values(1-5)
 foreign key constraints on property id and user id
 MESSAGE TABLE
 foreign key constraints on sender id and recipient id
 INDEXING
 primary keys:indexed automatically
 additional indexes:email in the user table,property id in the property and bookingtables,booking id in the booking and payment table
+
+
+
