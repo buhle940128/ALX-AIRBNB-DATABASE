@@ -1,1 +1,10 @@
 ENTITIES and Attributes
+User
+User id:primary key,uuid,indexed
+first name:VARCHAR,NOT NULL
+last name:VARCHAAR,NOT NULL
+email:VARCHAAR,UNIQUE,NOT NULL
+password hash:VARCHAAR,NOT NULL
+phone number:VARCHAAR,NULL
+role:ENUM(guest,host,admin),NOT NULL
+created at:TIMESTAMP,DEFAULT CURRENT TIMESTAMP
